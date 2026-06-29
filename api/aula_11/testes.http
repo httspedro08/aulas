@@ -1,0 +1,24 @@
+### Teste da Rota GET - Listar Produtos
+GET http://localhost:5000/produtos
+Accept: application/json
+
+###
+
+### Teste da Rota POST - Inserir Produto com Sucesso
+POST http://localhost:5000/produtos
+Content-Type: application/json
+
+{
+    "nome": "Headset Gamer",
+    "preco": 199.90
+}
+
+###
+
+### Teste da Rota POST - Erro de validação (Sem preço)
+POST http://localhost:5000/produtos
+Content-Type: application/json
+
+{
+    "nome": "Produto Sem Preço"
+}
